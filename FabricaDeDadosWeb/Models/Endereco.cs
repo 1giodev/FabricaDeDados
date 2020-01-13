@@ -20,7 +20,7 @@ namespace FabricaDeDadosWeb.Models
         public string Uf { get; set; }
         public int IdMunicipio { get; set; }
 
-        public virtual Municipio IdMunicipioNavigation { get; set; }
+        public virtual Municipio Municipio1 { get; set; }
         public virtual ICollection<EmpresaEndereco> EmpresaEndereco { get; set; }
         public virtual ICollection<PessoaEndereco> PessoaEndereco { get; set; }
     }

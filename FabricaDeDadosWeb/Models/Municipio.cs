@@ -15,7 +15,7 @@ namespace FabricaDeDadosWeb.Models
         public int? CodigoIbge { get; set; }
         public string Nome { get; set; }
 
-        public virtual Estado IdEstadoNavigation { get; set; }
+        public virtual Estado Estado { get; set; }
         public virtual ICollection<Endereco> Endereco { get; set; }
     }
 }

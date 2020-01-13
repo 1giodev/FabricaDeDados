@@ -79,13 +79,13 @@ namespace FabricaDeDadosWeb.Models
             {
                 entity.Property(e => e.Id).HasDefaultValueSql("nextval('\"EmpresaEndereco_seq\"'::regclass)");
 
-                entity.HasOne(d => d.IdEmpresaNavigation)
+                entity.HasOne(d => d.Empresa)
                     .WithMany(p => p.EmpresaEndereco)
                     .HasForeignKey(d => d.IdEmpresa)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("EmpresaEndereco_IdEmpresa_fkey");
 
-                entity.HasOne(d => d.IdEnderecoNavigation)
+                entity.HasOne(d => d.Endereco)
                     .WithMany(p => p.EmpresaEndereco)
                     .HasForeignKey(d => d.IdEndereco)
                     .OnDelete(DeleteBehavior.ClientSetNull)
@@ -104,8 +104,6 @@ namespace FabricaDeDadosWeb.Models
                     .IsRequired()
                     .HasMaxLength(8);
 
-                entity.Property(e => e.IdMunicipio).HasDefaultValueSql("1");
-
                 entity.Property(e => e.Logradouro)
                     .IsRequired()
                     .HasMaxLength(250);
@@ -122,7 +120,7 @@ namespace FabricaDeDadosWeb.Models
                     .IsRequired()
                     .HasMaxLength(2);
 
-                entity.HasOne(d => d.IdMunicipioNavigation)
+                entity.HasOne(d => d.Municipio1)
                     .WithMany(p => p.Endereco)
                     .HasForeignKey(d => d.IdMunicipio)
                     .OnDelete(DeleteBehavior.ClientSetNull)
@@ -157,7 +155,7 @@ namespace FabricaDeDadosWeb.Models
 
                 entity.Property(e => e.Nome).HasMaxLength(250);
 
-                entity.HasOne(d => d.IdEstadoNavigation)
+                entity.HasOne(d => d.Estado)
                     .WithMany(p => p.Municipio)
                     .HasForeignKey(d => d.IdEstado)
                     .HasConstraintName("FK_Municipio_Estado");
@@ -212,13 +210,13 @@ namespace FabricaDeDadosWeb.Models
             {
                 entity.Property(e => e.Id).HasDefaultValueSql("nextval('\"PessoaEndereco_seq\"'::regclass)");
 
-                entity.HasOne(d => d.IdEnderecoNavigation)
+                entity.HasOne(d => d.Endereco)
                     .WithMany(p => p.PessoaEndereco)
                     .HasForeignKey(d => d.IdEndereco)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("PessoaEndereco_IdEndereco_fkey");
 
-                entity.HasOne(d => d.IdPessoaNavigation)
+                entity.HasOne(d => d.Pessoa)
                     .WithMany(p => p.PessoaEndereco)
                     .HasForeignKey(d => d.IdPessoa)
                     .OnDelete(DeleteBehavior.ClientSetNull)

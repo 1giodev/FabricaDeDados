@@ -9,7 +9,7 @@ namespace FabricaDeDadosWeb.Models
         public int IdEmpresa { get; set; }
         public int IdEndereco { get; set; }
 
-        public virtual Empresa IdEmpresaNavigation { get; set; }
-        public virtual Endereco IdEnderecoNavigation { get; set; }
+        public virtual Empresa Empresa { get; set; }
+        public virtual Endereco Endereco { get; set; }
     }
 }
