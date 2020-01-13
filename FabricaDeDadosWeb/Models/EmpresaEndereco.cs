@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FabricaDeDadosWeb.Models
 {
     public partial class EmpresaEndereco
     {
+        [Key]
         public int Id { get; set; }
         public int IdEmpresa { get; set; }
         public int IdEndereco { get; set; }

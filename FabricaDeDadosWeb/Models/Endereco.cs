@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FabricaDeDadosWeb.Models
@@ -12,6 +13,7 @@ namespace FabricaDeDadosWeb.Models
             PessoaEndereco = new HashSet<PessoaEndereco>();
         }
 
+        [Key]
         public int Id { get; set; }
         public string Cep { get; set; }
         public string Logradouro { get; set; }

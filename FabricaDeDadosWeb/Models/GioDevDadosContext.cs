@@ -32,7 +32,7 @@ namespace FabricaDeDadosWeb.Models
 
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseNpgsql(ConfiguracaoApp.GetSection("ConnectionStrings:GioDevDadosContext").Value);
+                optionsBuilder.UseLazyLoadingProxies().UseNpgsql(ConfiguracaoApp.GetSection("ConnectionStrings:GioDevDadosContext").Value);
             }
         }
 

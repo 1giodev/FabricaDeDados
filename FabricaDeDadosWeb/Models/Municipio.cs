@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FabricaDeDadosWeb.Models
@@ -11,6 +12,7 @@ namespace FabricaDeDadosWeb.Models
             Endereco = new HashSet<Endereco>();
         }
 
+        [Key]
         public int Id { get; set; }
         public int? IdEstado { get; set; }
         public int? CodigoIbge { get; set; }

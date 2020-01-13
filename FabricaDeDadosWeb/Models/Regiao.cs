@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace FabricaDeDadosWeb.Models
 {
@@ -10,6 +11,7 @@ namespace FabricaDeDadosWeb.Models
             Estado = new HashSet<Estado>();
         }
 
+        [Key]
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Sigla { get; set; }

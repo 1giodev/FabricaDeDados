@@ -20,8 +20,6 @@ namespace FabricaDeDadosWeb.Controllers
 
         public IActionResult Index()
         {
-            GioDevDadosContext Contexto = new GioDevDadosContext();
-            var Pessoas = Contexto.Endereco.Take(10).ToList();
             return View();
         }
 
