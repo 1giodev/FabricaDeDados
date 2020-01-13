@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FabricaDeDadosWeb.Models
 {
@@ -14,7 +15,8 @@ namespace FabricaDeDadosWeb.Models
         public int? IdEstado { get; set; }
         public int? CodigoIbge { get; set; }
         public string Nome { get; set; }
-
+        
+        [ForeignKey("IdEstado")]
         public virtual Estado Estado { get; set; }
         public virtual ICollection<Endereco> Endereco { get; set; }
     }

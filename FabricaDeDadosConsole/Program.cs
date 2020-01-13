@@ -8,7 +8,7 @@ namespace FabricaDeDadosConsole
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World!" + args);
 
             //Contexto = new FabricaDeDadosWeb.Models.GioDevDadosContext();
 

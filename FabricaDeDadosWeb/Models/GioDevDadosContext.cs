@@ -142,7 +142,7 @@ namespace FabricaDeDadosWeb.Models
                     .HasMaxLength(2)
                     .HasDefaultValueSql("1");
 
-                entity.HasOne(d => d.IdRegiaoNavigation)
+                entity.HasOne(d => d.Regiao)
                     .WithMany(p => p.Estado)
                     .HasForeignKey(d => d.IdRegiao)
                     .OnDelete(DeleteBehavior.ClientSetNull)

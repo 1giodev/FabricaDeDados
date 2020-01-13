@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FabricaDeDadosWeb.Models
 {
@@ -9,7 +10,9 @@ namespace FabricaDeDadosWeb.Models
         public int IdPessoa { get; set; }
         public int IdEndereco { get; set; }
 
+        [ForeignKey("IdEndereco")]
         public virtual Endereco Endereco { get; set; }
+        [ForeignKey("IdPessoa")]
         public virtual Pessoa Pessoa { get; set; }
     }
 }

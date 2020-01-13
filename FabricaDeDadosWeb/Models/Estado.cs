@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FabricaDeDadosWeb.Models
 {
@@ -16,7 +17,8 @@ namespace FabricaDeDadosWeb.Models
         public string Nome { get; set; }
         public string Sigla { get; set; }
 
-        public virtual Regiao IdRegiaoNavigation { get; set; }
+        [ForeignKey("IdRegiao")]
+        public virtual Regiao Regiao { get; set; }
         public virtual ICollection<Municipio> Municipio { get; set; }
     }
 }
