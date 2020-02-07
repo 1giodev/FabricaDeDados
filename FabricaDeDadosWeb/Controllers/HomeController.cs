@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using FabricaDeDadosWeb.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace FabricaDeDadosWeb.Controllers
 {
@@ -26,6 +27,20 @@ namespace FabricaDeDadosWeb.Controllers
         public IActionResult Login()
         {
             return View();
+        }
+
+        public JsonResult Login(FormCollection form)
+        {
+
+
+            return Json("");
+        }
+
+        public JsonResult Cadastro(FormCollection form)
+        {
+
+
+            return Json("");
         }
 
         public IActionResult Privacy()
