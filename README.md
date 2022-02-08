@@ -1,4 +1,3 @@
-# FabricaDeDados
+# FDF - Fabrica de dados fake
 
-
-Essa é a Fabrica de Dados!
+- Esse projeto é uma API que gera dados de pessoa física ou jurídica para teste de software!
